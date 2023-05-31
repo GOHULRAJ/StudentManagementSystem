@@ -1,0 +1,32 @@
+<h3>Edit Student Detail</h3>
+{{#if msg}}
+<div class="recordstatus">{{msg}}</div>
+{{/if}}
+{{#each rows}}
+
+
+<div class="form-container">
+    <form action="/edituser/{{this.id}}" method="post">
+
+<div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" value="{{this.name}}">
+</div>
+
+<div class="form-group">
+    <label for="age">Age</label>
+    <input type="text" name="age" id="age" value="{{this.age}}">
+</div>
+
+<div class="form-group">
+    <label for="city">City</label>
+    <input type="text" name="city" id="city" value="{{this.city}}">
+</div>
+
+<div class="form-group-btn">
+   <button type="submit">Save Changes</button>
+</div>
+</form>
+</div>
+
+{{/each}}
